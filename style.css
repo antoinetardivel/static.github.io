@@ -1,21 +1,653 @@
-body{
-	background-color:#131418;
-	margin: 0;
+/*
+Mince (100)
+Italique fin (100i)
+Lumière (300)
+Italique léger (300i)
+Régulier (400)
+Italique régulier (400i)
+Moyen (600)
+Italique moyen (600i)
+Gras (700)
+Italique gras (700i)
+Noir (800)
+Noir Italique (800i)
+*/
+
+visible { visibility:visible; }
+cache  { visibility:hidden; }
+
+body {
+    cursor: url("./images/cursor.png") 10 10, pointer;
+    background-image: url('./images/fond.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+.pagecontent{
+    display: flex;
+    flex-direction: row;
+    height: 86vh;
+    width: 100vw;
 }
-.imagelogo{
-	position: absolute;
-	width: 5vw;
-	height:5vw;
-	background-color: #0B0B0D;
+.margehaut{
+    height: 7vh;
+    top: 0;
 }
-div.barrelaterale{
-	display:flex;
-	width:5vw; 
-	height:100vh;
-	text-decoration:none; 
-	text-align:center; 
-	background-color:#1E1F26;
+.margebas{
+    height: 7vh;
+    bottom: 0;
 }
-.imagelogo:hover {
-  background-color: #0E0F11;
+.margeg{
+    height: 86vh;
+    width: 5vw;
+    left: 0;
+    margin-right: auto;
+}
+.marged{
+    height: 86vh;
+    width: 5vw;
+    margin-right: 0;
+    right: 0;
+    margin-left: auto;
+}
+.divgauche{
+    display: flex;
+    flex-direction: column;
+    width: 22vw;
+    height: 90vh;
+}
+.titrelogo{
+    cursor: pointer;
+    position: fixed;
+    top: 7vh;
+    left: 5vw;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: -11px;
+}
+.NomTitre{
+    cursor: pointer;
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    width: auto;
+    margin-top: 11px;
+    font-size: 20px;
+    line-height:150%;
+    margin-left:-7px;
+
+}
+.NomTitre1{
+    margin: 0;
+}
+.NomTitre2{
+    margin: 0;
+}
+
+.socialmedias{
+    position: fixed;
+    bottom: 7vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -7px;
+    margin-top: auto;
+}
+.svginsta{
+    cursor: pointer;
+    margin-top: -3px;
+    width: 26px;
+    height: 26px;
+    color: white;
+    margin-left: 9px;
+}
+.svgbehance{
+    cursor: pointer;
+    margin-top: -8px;
+    width: 36px;
+    height: 36px;
+    color: white;
+}
+
+.linkedin{
+    cursor: pointer;
+    margin-top: -3px;
+    width: 24px;
+    height: 24px;
+    color: white;
+    margin-left: 9px;
+}
+.menu{
+    position: fixed;
+    top:7vh;
+    right: 5vw;
+}
+.barremenu{
+    height: 3px;
+    width: 30px;
+    background-color: white;
+
+}
+.espacemenu{
+    height: 9px;
+    width: 30px;
+}
+.iconpw{
+    cursor: pointer;
+    position: fixed;
+    height: 22px;
+    bottom: 7vh;
+    right: 5vw;
+}
+.ongletsbox{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.imagesonglets{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 11vw;
+    height: 52vh;
+    border: 3px solid white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.imagesonglets:hover {
+    transform: scale(1.15);
+    transition: 0.1s;
+  }
+.imagesonglets:not(:hover){
+    transform: scale(1);
+    transition: 0.1s;
+}
+.onglets{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.gris:hover{
+    color: #B3B3B3;
+}
+.iconpw:hover{
+    content: url('./images/pwhover.png');
+}
+.svginsta:hover{
+    color: #B3B3B3;
+}
+.svgbehance:hover{
+    color: #B3B3B3;
+}
+.linkedin:hover{
+    color: #B3B3B3;
+}
+.langue{
+    cursor: pointer;
+    line-height: 90%;
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 32px;
+    position: fixed;
+    top: 7vh;
+    right: 5vw;
+    margin: 0;
+    margin-bottom: -3px;
+    padding: 0;
+}
+.worktitle{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 50px;
+}
+#navigation{
+    display: flex;
+    flex-direction: row;
+
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    list-style-type:none;
+    padding: 0;
+    margin-top: 10px;
+}
+#navigation li a{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration:none
+}
+.contentofpage{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.spacemenu{
+    margin-left: 15px;
+}
+.worktitle{
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
+.vignette{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 16vw;
+    height: 10vw;
+    background-color: white;
+}
+.articles{
+    margin-left: -25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 54.5vw;
+}
+.flechegoup:hover{
+    filter: contrast(0.5);
+}
+
+.flechegoup{
+    cursor: pointer;
+    position: fixed;
+    height: 30px;
+    bottom: 7vh;
+    right: 5vw;
+}
+.titrelogo:hover{
+    filter: contrast(0.5);
+}
+.carre{
+    background-color: white;
+    width: 4px;
+    height: 4px;
+}
+#navigation li{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.carre{
+    margin-left: auto;
+    margin-right: auto;
+}
+.articlescontent{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.web{
+    background-color: white;
+}
+.graph{
+    background-color: red;
+}
+.photo{
+    background-color: green;
+}
+.video{
+    background-color: blue;
+}
+.video{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 16vw;
+    height: 10vw;
+}
+.graph{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 16vw;
+    height: 10vw;
+}
+.web{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 16vw;
+    height: 10vw;
+}
+.photo{
+    margin-left: 25px;
+    margin-top: 25px;
+    width: 16vw;
+    height: 10vw;
+}
+.carreall{
+    display: block;
+}
+.carreweb{
+    display: none;
+}
+.carregraph{
+    display: none;
+}
+.carrephoto{
+    display: none;
+}
+.carrevideo{
+    display: none;
+}
+.work{
+    background: transparent url('./images/work.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+}
+.about{
+    background: transparent url('./images/about.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+    margin-left: 3vw;
+}
+.contact{
+    background: transparent url('./images/contact.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+    margin-left: 3vw;
+}
+.poeticwave{
+    background: transparent url('./images/poeticwave.jpg');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+    margin-left: 3vw;
+}
+
+.work:hover{
+    background: transparent url('./images/workgif2.gif');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+}
+.about:hover{
+    background: transparent url('./images/aboutgif2.gif');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+}
+.contact:hover{
+    background: transparent url('./images/contactgif2.gif');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+}
+.poeticwave:hover{
+    background: transparent url('./images/poeticwavegif2.gif');
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    background-position:center center;
+}
+.pdfcv{
+    width: 55vw;
+}
+.backpdf{
+    cursor: pointer;
+    position: fixed;
+    align-content: center;
+    top: 50vh;
+    left: 5vw;
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.4vw;
+}
+.myform{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.required{
+    color: #767575;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5vw;
+}
+.input{
+    color: #767575;
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5vw;
+    background-color: black;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    width: 35vw;
+    
+    border-width: 3px;
+    background: transparent url('./images/transparent.png');
+}
+#message{
+    resize : none;
+    
+    overflow-y: scroll;
+    scrollbar-color: white transparent;
+    scrollbar-width: thin;
+    width: 35vw;
+}
+*:focus {
+    outline: 0;
+  }
+#submit_button{
+    background: transparent url('./images/transparent.png');
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5vw;
+    border: 0;
+    padding: 0;
+    margin-left: 29vw;
+    cursor: pointer;
+}
+.bienenvoye{
+    color: white;
+}
+.catdetail{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+}
+.infocatdetail{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+}
+.titrearticle{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 50px;
+}
+.detailsgauche{
+    margin-right: 30px;
+    text-align: right;
+    width: 50%;
+}
+.partdetailsarticle{
+    display: flex;
+    flex-direction: row;
+}
+.detailsdroit{
+    margin-left: 30px;
+    width: 50%;
+}
+.contentofarticle{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.videoarticle{
+    cursor: pointer;
+    width: 50vw;
+    margin-top: 50px;
+}
+.descriptionarticles{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+}
+.contentdescription{
+    width: 45vw;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto  ;
+}
+.flecheprevious:hover{
+    filter: contrast(0.5);
+}
+
+.flecheprevious{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 30px;
+    cursor: pointer;
+    height: 30px;
+    transform: rotate(-90deg);
+}
+.flechenext:hover{
+    filter: contrast(0.5);
+}
+
+.flechenext{
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    height: 30px;
+    transform: rotate(90deg);
+}
+.imagearticle{
+    width: 50vw;
+    margin-top: 50px;
+}
+.vignetteart:hover{
+    transform: scale(1.10);
+    transition: 0.1s;
+    vertical-align:middle;
+    filter: brightness(20%);
+    -webkit-filter: brightness(20%);
+}
+.colorused{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+.unecouleur{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+.rectanglecouleur{
+    width: 50px;
+    height: 50px;
+    border: 3px solid white;
+}
+.colorhex{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.titreartvignettes{
+    text-align: center;
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.3vw;
+    height: 1.3vw;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.vignetteart{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.vignetteart:hover p{
+    opacity: 1;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+.vignetteart p{
+    opacity: 0;
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+.titreartvignettes{
+    filter: brightness(100%);
+    -webkit-filter: brightness(100%);
+}
+.musee_imprimerie_div_images_split{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.imagearticlemuseeimprimerie{
+    width: 24vw;
+}
+.part_droite_img_musee_imprimerie{
+    display: flex;
+    flex-direction: column;
+}
+.infoimagesmusee{
+    color: white;
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
 }
