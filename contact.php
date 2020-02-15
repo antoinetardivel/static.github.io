@@ -81,7 +81,7 @@
             <!-- cadre -->
 
             <div class="titrelogo" onclick='window.location.href="index.html"'>
-                <img src="./images/logoblanc.png" alt="Logo Antoine Tardivel" width="80" height="80">
+                <img src="./images/logoblanc.png" alt="Logo Antoine Tardivel" class="imglogo">
                 <div class="NomTitre">
                     <h1 class="NomTitre1">Antoine</h1>
                     <h1 class="NomTitre2">Tardivel</h1>
